@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"Robert Vogel"
+		]
+	},
+	"sectionanchors-desc": "Fügt einen Link zur Überschrift hinzu",
+	"sectionanchors-button-label": "Link",
+	"sectionanchors-button-tooltip": "Navigiert zu dieser Überschrift",
+	"sectionanchors-button-notification-text": "Der Link zu \"$1\" wurde in die Zwischenablage kopiert."
+}

@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"Robert Vogel"
+		]
+	},
+	"sectionanchors-desc": "Adds a link to headings",
+	"sectionanchors-button-label": "Link",
+	"sectionanchors-button-tooltip": "Navigates to this heading",
+	"sectionanchors-button-notification-text": "Link to heading \"$1\" copied to clipboard"
+}
