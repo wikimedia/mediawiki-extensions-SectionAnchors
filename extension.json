@@ -1,0 +1,45 @@
+{
+	"name": "SectionAnchors",
+	"version": "2.0.0",
+	"author": [
+		"[https://www.hallowelt.com Hallo Welt! GmbH]"
+	],
+	"url": "https://www.mediawiki.org/wiki/Extension:SectionAnchors",
+	"descriptionmsg": "sectionanchors-desc",
+	"license-name": "GPL-3.0-only",
+	"type": "other",
+	"requires": {
+		"MediaWiki": ">= 1.35.0"
+	},
+	"AutoloadNamespaces": {
+		"MediaWiki\\Extension\\SectionAnchors\\": "src/"
+	},
+	"HookHandlers": {
+		"SectionAnchorsHooks": {
+			"class": "MediaWiki\\Extension\\SectionAnchors\\Hooks"
+		}
+	},
+	"Hooks": {
+		"BeforePageDisplay": "SectionAnchorsHooks"
+	},
+	"MessagesDirs": {
+		"SectionAnchors": [
+			"i18n"
+		]
+	},
+	"ResourceModules": {
+		"ext.sectionAnchors.scripts": {
+			"localBasePath": "resources",
+			"remoteExtPath": "SectionAnchors/resources",
+			"packageFiles": [
+				"ext.sectionAnchors.scripts.js"
+			],
+			"messages": [
+				"sectionanchors-button-label",
+				"sectionanchors-button-tooltip",
+				"sectionanchors-button-notification-text"
+			]
+		}
+	},
+	"manifest_version": 2
+}
