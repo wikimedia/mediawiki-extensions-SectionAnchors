@@ -1,6 +1,7 @@
 function createSectionAnchorButton( heading ) {
 	var dfd = $.Deferred();
-	mw.loader.using( [ 'oojs-ui-widgets' ] ).done( function () {
+	var modules = [ 'oojs-ui-widgets', 'oojs-ui.styles.icons-editing-core' ];
+	mw.loader.using( modules ).done( function () {
 		var $heading = $( heading ),
 			headingOffset = $heading.offset(),
 			// h1, h2, h3, h4, h5, h6
