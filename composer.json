@@ -1,5 +1,5 @@
 {
-	"name": "mediawiki/section-links",
+	"name": "mediawiki/section-anchors",
 	"type": "mediawiki-extension",
 	"require": {
 		"composer/installers": "~1|~2"
