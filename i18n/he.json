@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"Amire80"
+		]
+	},
+	"sectionanchors-desc": "הוספת קישור לכותרות",
+	"sectionanchors-button-label": "קישור",
+	"sectionanchors-button-tooltip": "ניווט לכותרת הזאת",
+	"sectionanchors-button-notification-text": "הקישור לכותרת \"$1\" הועתק ללוח"
+}

@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"Eleassar"
+		]
+	},
+	"sectionanchors-desc": "Doda povezavo do podnaslovov",
+	"sectionanchors-button-label": "Povezava",
+	"sectionanchors-button-tooltip": "Pomakne se do tega podnaslova",
+	"sectionanchors-button-notification-text": "Povezava do naslova »$1« je kopirana v odložišče"
+}

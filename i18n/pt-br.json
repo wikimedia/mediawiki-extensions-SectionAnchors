@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"Re demz"
+		]
+	},
+	"sectionanchors-button-label": "Link",
+	"sectionanchors-button-tooltip": "Navega a esse título",
+	"sectionanchors-button-notification-text": "Link para o título \"$1\" foi copiado para área de transferência"
+}

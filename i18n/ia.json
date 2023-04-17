@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"McDutchie"
+		]
+	},
+	"sectionanchors-desc": "Adde un ligamine a capites",
+	"sectionanchors-button-label": "Ligamine",
+	"sectionanchors-button-tooltip": "Naviga a iste capite",
+	"sectionanchors-button-notification-text": "Ligamine a capite \"$1\" copiate al area de transferentia"
+}

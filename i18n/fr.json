@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"Verdy p"
+		]
+	},
+	"sectionanchors-desc": "Ajoute un lien vers un titre de section",
+	"sectionanchors-button-label": "Lien",
+	"sectionanchors-button-tooltip": "Navigue vers ce titre de section",
+	"sectionanchors-button-notification-text": "Lien vers le titre de section « $1 » copié dans le presse-papiers"
+}

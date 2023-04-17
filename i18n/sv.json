@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"Sabelöga"
+		]
+	},
+	"sectionanchors-desc": "Lägger till en länk till rubriker",
+	"sectionanchors-button-label": "Länk",
+	"sectionanchors-button-tooltip": "Navigerar till denna rubrik",
+	"sectionanchors-button-notification-text": "Länk till rubrik \"$1\" kopierades till urklipp"
+}

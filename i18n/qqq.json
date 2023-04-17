@@ -1,11 +1,12 @@
 {
 	"@metadata": {
 		"authors": [
+			"Amire80",
 			"Robert Vogel"
 		]
 	},
 	"sectionanchors-desc": "{{desc|name=SectionAnchors|url=https://www.mediawiki.org/wiki/Extension:SectionAnchors}}",
 	"sectionanchors-button-label": "Label for a button",
 	"sectionanchors-button-tooltip": "Tooltip for a button",
-	"sectionanchors-button-notification-text": "Notification text\n * $1 - section name"
+	"sectionanchors-button-notification-text": "Notification text\n* $1 - section name"
 }
