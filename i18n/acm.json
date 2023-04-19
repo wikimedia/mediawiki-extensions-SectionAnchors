@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"MRidhaAJ"
+		]
+	},
+	"sectionanchors-desc": "يحط وصله للعناوين",
+	"sectionanchors-button-label": "وصله",
+	"sectionanchors-button-tooltip": "يتصفح لهاذ العنوان",
+	"sectionanchors-button-notification-text": "الوصله للعنوان \"$1\" انتسخت للحافظه"
+}
