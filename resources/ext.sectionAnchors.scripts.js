@@ -3,7 +3,6 @@ function createSectionAnchorButton( heading ) {
 	var modules = [ 'oojs-ui-widgets', 'oojs-ui.styles.icons-editing-core' ];
 	mw.loader.using( modules ).done( function () {
 		var $heading = $( heading ),
-			headingOffset = $heading.offset(),
 			// h1, h2, h3, h4, h5, h6
 			$headingContainer = $heading.parent(),
 			$headingAnchor = $heading.prev( 'span[id]' ),
@@ -17,11 +16,12 @@ function createSectionAnchorButton( heading ) {
 			$sectionLink = sectionLinkIconWidget.$element;
 
 		heading.$sectionAnchorButton = $sectionLink;
-		$sectionLink.insertBefore( $headingContainer );
+		$headingContainer.prepend( $sectionLink );
 		$sectionLink.css( {
 			position: 'absolute',
-			top: headingOffset.top + ( ( $heading.height() - $sectionLink.height() ) / 2 ),
-			left: headingOffset.left - $sectionLink.width() - 10,
+			marginLeft: '-20px',
+			minWidth: '16px',
+			width: '16px',
 			cursor: 'pointer'
 		} );
 		$sectionLink.data( {
@@ -33,7 +33,7 @@ function createSectionAnchorButton( heading ) {
 			'click',
 			function ( event ) {
 				var $me = $( this );
-				if ( event.ctrlKey ) {
+				if ( event.ctrlKey && navigator.clipboard ) {
 					var headingAnchorText = $me.data( 'headingText' );
 					var notifText = mw.message(
 						'sectionanchors-button-notification-text',
