@@ -42,11 +42,13 @@ function createSectionAnchorButton( heading ) {
 					mw.loader.using( [ 'mediawiki.Title' ] ).done( function () {
 						var pageName = mw.config.get( 'wgPageName' ),
 							oldId = mw.config.get( 'wgRevisionId' ),
-							title = mw.Title.newFromText( pageName );
+							title = mw.Title.newFromText( pageName ),
+							params = {};
 						title.fragment = $me.data( 'headingAnchorId' );
-						var url = title.getUrl( {
-							oldid: oldId
-						} );
+						if ( oldId !== 0 ) {
+							params.oldid = oldId;
+						}
+						var url = title.getUrl( params );
 
 						navigator.clipboard.writeText( url );
 						mw.notify( notifText );
