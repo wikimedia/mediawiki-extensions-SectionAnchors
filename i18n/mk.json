@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"Bjankuloski06"
+		]
+	},
+	"sectionanchors-desc": "Додава врска во заглавија",
+	"sectionanchors-button-label": "Врска",
+	"sectionanchors-button-tooltip": "Води до ова заглавие",
+	"sectionanchors-button-notification-text": "Врската води до заглавието „$1“ ископирано од меѓускладот"
+}

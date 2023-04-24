@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"Fitoschido"
+		]
+	},
+	"sectionanchors-desc": "Añade un enlace a los títulos",
+	"sectionanchors-button-label": "Enlace",
+	"sectionanchors-button-tooltip": "Navega a este título",
+	"sectionanchors-button-notification-text": "Se copió el título «$1» en el portapapeles"
+}
