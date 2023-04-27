@@ -1,4 +1,6 @@
 function createSectionAnchorButton( heading ) {
+	createStyles();
+
 	var dfd = $.Deferred();
 	var modules = [ 'oojs-ui-widgets', 'oojs-ui.styles.icons-editing-core' ];
 	mw.loader.using( modules ).done( function () {
@@ -17,13 +19,6 @@ function createSectionAnchorButton( heading ) {
 
 		heading.$sectionAnchorButton = $sectionLink;
 		$headingContainer.prepend( $sectionLink );
-		$sectionLink.css( {
-			position: 'absolute',
-			marginLeft: '-20px',
-			minWidth: '16px',
-			width: '16px',
-			cursor: 'pointer'
-		} );
 		$sectionLink.data( {
 			headingAnchorId: headingAnchorId,
 			headingText: $heading.text()
@@ -32,34 +27,72 @@ function createSectionAnchorButton( heading ) {
 		$sectionLink.on(
 			'click',
 			function ( event ) {
-				var $me = $( this );
-				if ( event.ctrlKey && navigator.clipboard ) {
-					var headingAnchorText = $me.data( 'headingText' );
-					var notifText = mw.message(
+				// If no access to the clipboard, we just scroll to the heading
+				if ( !navigator.clipboard ) {
+					window.location.hash = headingAnchorId;
+					return;
+				}
+
+				var $me = $( this ),
+					headingAnchorText = $me.data( 'headingText' ),
+					notifText = mw.message(
 						'sectionanchors-button-notification-text',
 						[ headingAnchorText ]
-					).text();
-					mw.loader.using( [ 'mediawiki.Title' ] ).done( function () {
-						var pageName = mw.config.get( 'wgPageName' ),
-							oldId = mw.config.get( 'wgRevisionId' ),
-							title = mw.Title.newFromText( pageName ),
-							params = {};
-						title.fragment = $me.data( 'headingAnchorId' );
-						if ( oldId !== 0 ) {
-							params.oldid = oldId;
-						}
-						var url = title.getUrl( params );
+					).text(),
+					fragment = $me.data( 'headingAnchorId' ),
+					isCtrlKey = event.ctrlKey || event.metaKey,
+					pageName = mw.config.get( 'wgPageName' );
 
-						navigator.clipboard.writeText( url );
-						mw.notify( notifText );
-					} );
-				} else {
-					window.location.hash = headingAnchorId;
+				// If ctrl+shift is pressed, we copy pagename plus the fragment to the clipboard
+				// This can be used for creating an internal wikitext link
+				if ( isCtrlKey && event.shiftKey ) {
+					navigator.clipboard.writeText(
+						pageName + '#' + fragment
+					);
+					mw.notify( notifText );
+					return;
 				}
+
+				// In any other case we copy the full url to the clipboard
+				mw.loader.using( [ 'mediawiki.Title' ] ).done( function () {
+					var oldId = mw.config.get( 'wgRevisionId' ),
+						title = mw.Title.newFromText( pageName ),
+						params = {};
+
+					title.fragment = fragment;
+					if ( oldId !== 0 && isCtrlKey ) {
+						params.oldid = oldId;
+					}
+
+					var url = mw.config.get( 'wgServer' ) + title.getUrl( params );
+
+					// eslint-disable-next-line compat/compat
+					navigator.clipboard.writeText( url );
+					mw.notify( notifText );
+				} );
+
 			}
 		);
 	} );
 	return dfd.promise();
+}
+
+var stylesCreated = false;
+function createStyles() {
+	if ( stylesCreated ) {
+		return;
+	}
+	stylesCreated = true;
+	var styles =
+		'.sectionanchors-button {' +
+			'position: absolute;' +
+			'margin-left: -20px;' +
+			'min-width: 16px;' +
+			'width: 16px;' +
+			'cursor: pointer;' +
+			'opacity: 0.5' +
+		'}';
+	$( '<style>' ).text( styles ).appendTo( 'head' );
 }
 
 $( document ).on( 'mouseover', '.mw-headline', function () {
