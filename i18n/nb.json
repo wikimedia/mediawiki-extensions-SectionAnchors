@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"Jon Harald Søby"
+		]
+	},
+	"sectionanchors-desc": "Legger til ei lenke i overskrifter",
+	"sectionanchors-button-label": "Lenke",
+	"sectionanchors-button-tooltip": "Navigerer til denne overskriften",
+	"sectionanchors-button-notification-text": "Lenke til overskriften «$1» kopiert til utklippstavla"
+}
