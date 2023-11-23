@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"Alshamiri1"
+		]
+	},
+	"sectionanchors-desc": "يضيف الرابط إلى العناوين",
+	"sectionanchors-button-label": "وصلة",
+	"sectionanchors-button-tooltip": "ينتقل إلى هذا العنوان",
+	"sectionanchors-button-notification-text": "تم نسخ رابط العنوان \" $1 \" إلى الحافظة"
+}

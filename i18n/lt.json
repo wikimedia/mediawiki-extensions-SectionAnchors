@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"Nokeoo"
+		]
+	},
+	"sectionanchors-desc": "Prideda nuorodą į antraštes",
+	"sectionanchors-button-label": "Nuoroda",
+	"sectionanchors-button-tooltip": "Navigacija į šią antraštę",
+	"sectionanchors-button-notification-text": "Nuoroda į antraštę „$1“ nukopijuota į iškarpinę"
+}
