@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"Hedda"
+		]
+	},
+	"sectionanchors-desc": "Başlıklara bağlantı ekler",
+	"sectionanchors-button-label": "Bağlantı",
+	"sectionanchors-button-tooltip": "Bu başlığa gider",
+	"sectionanchors-button-notification-text": "\"$1\" başlığının bağlantısı panoya kopyalandı"
+}

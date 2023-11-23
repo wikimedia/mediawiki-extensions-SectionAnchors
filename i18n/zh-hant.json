@@ -1,8 +1,12 @@
 {
 	"@metadata": {
 		"authors": [
+			"Kly",
 			"Winston Sung"
 		]
 	},
-	"sectionanchors-button-label": "連結"
+	"sectionanchors-button-label": "連結",
+	"sectionanchors-desc": "添加標題的連結",
+	"sectionanchors-button-tooltip": "導覽到此標題",
+	"sectionanchors-button-notification-text": "標題連結「$1」已復製到剪貼簿"
 }
