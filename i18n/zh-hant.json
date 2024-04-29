@@ -5,8 +5,8 @@
 			"Winston Sung"
 		]
 	},
-	"sectionanchors-button-label": "連結",
-	"sectionanchors-desc": "添加標題的連結",
-	"sectionanchors-button-tooltip": "導覽到此標題",
-	"sectionanchors-button-notification-text": "標題連結「$1」已復製到剪貼簿"
+	"sectionanchors-button-label": "\u9023\u7d50",
+	"sectionanchors-desc": "\u6dfb\u52a0\u6a19\u984c\u7684\u9023\u7d50",
+	"sectionanchors-button-tooltip": "\u5c0e\u89bd\u5230\u6b64\u6a19\u984c",
+	"sectionanchors-button-notification-text": "\u6a19\u984c\u9023\u7d50\u300c$1\u300d\u5df2\u5fa9\u88fd\u5230\u526a\u8cbc\u7c3f"
 }
