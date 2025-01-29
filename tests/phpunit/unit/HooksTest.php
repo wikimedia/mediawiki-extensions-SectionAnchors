@@ -3,7 +3,7 @@
 namespace MediaWiki\Extension\SectionAnchors\Tests;
 
 use MediaWiki\Extension\SectionAnchors\Hooks;
-use OutputPage;
+use MediaWiki\Output\OutputPage;
 use Skin;
 
 /**
