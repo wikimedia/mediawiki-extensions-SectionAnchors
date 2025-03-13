@@ -1,10 +1,10 @@
 function createSectionAnchorButton( heading ) {
 	createStyles();
 
-	var dfd = $.Deferred();
-	var modules = [ 'oojs-ui-widgets', 'oojs-ui.styles.icons-editing-core' ];
-	mw.loader.using( modules ).done( function () {
-		var $heading = $( heading ),
+	const dfd = $.Deferred();
+	const modules = [ 'oojs-ui-widgets', 'oojs-ui.styles.icons-editing-core' ];
+	mw.loader.using( modules ).done( () => {
+		const $heading = $( heading ),
 			// h1, h2, h3, h4, h5, h6
 			$headingContainer = $heading.parent(),
 			$headingAnchor = $heading.prev( 'span[id]' ),
@@ -33,7 +33,7 @@ function createSectionAnchorButton( heading ) {
 					return;
 				}
 
-				var $me = $( this ),
+				const $me = $( this ),
 					headingAnchorText = $me.data( 'headingText' ),
 					notifText = mw.message(
 						'sectionanchors-button-notification-text',
@@ -54,8 +54,8 @@ function createSectionAnchorButton( heading ) {
 				}
 
 				// In any other case we copy the full url to the clipboard
-				mw.loader.using( [ 'mediawiki.Title' ] ).done( function () {
-					var oldId = mw.config.get( 'wgRevisionId' ),
+				mw.loader.using( [ 'mediawiki.Title' ] ).done( () => {
+					const oldId = mw.config.get( 'wgRevisionId' ),
 						title = mw.Title.newFromText( pageName ),
 						params = {};
 
@@ -64,7 +64,7 @@ function createSectionAnchorButton( heading ) {
 						params.oldid = oldId;
 					}
 
-					var url = mw.config.get( 'wgServer' ) + title.getUrl( params );
+					const url = mw.config.get( 'wgServer' ) + title.getUrl( params );
 
 					// eslint-disable-next-line compat/compat
 					navigator.clipboard.writeText( url );
@@ -77,13 +77,13 @@ function createSectionAnchorButton( heading ) {
 	return dfd.promise();
 }
 
-var stylesCreated = false;
+var stylesCreated = false; // eslint-disable-line no-var
 function createStyles() {
 	if ( stylesCreated ) {
 		return;
 	}
 	stylesCreated = true;
-	var styles =
+	const styles =
 		'.sectionanchors-button {' +
 			'position: absolute;' +
 			'margin-left: -20px;' +
@@ -97,8 +97,8 @@ function createStyles() {
 
 $( document ).on( 'mouseover', '.mw-headline', function () {
 	if ( !this.$sectionAnchorButton ) {
-		var me = this;
-		createSectionAnchorButton( this ).done( function () {
+		const me = this;
+		createSectionAnchorButton( this ).done( () => {
 			me.$sectionAnchorButton.show();
 		} );
 	} else {
@@ -117,8 +117,8 @@ $( document ).on( 'mouseout', '.sectionanchors-button', function () {
 } );
 
 $( document ).on( 'mouseout', '.mw-headline', function () {
-	var me = this;
-	setTimeout( function () {
+	const me = this;
+	setTimeout( () => {
 		if ( me.$sectionAnchorButton && !me.$sectionAnchorButton.data( 'isMouseOver' ) ) {
 			me.$sectionAnchorButton.hide();
 		}
