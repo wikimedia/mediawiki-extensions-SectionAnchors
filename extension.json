@@ -1,6 +1,6 @@
 {
 	"name": "SectionAnchors",
-	"version": "2.0.0-alpha",
+	"version": "3.0.0-alpha",
 	"author": [
 		"[https://www.hallowelt.com Hallo Welt! GmbH]"
 	],
@@ -9,7 +9,7 @@
 	"license-name": "GPL-3.0-only",
 	"type": "other",
 	"requires": {
-		"MediaWiki": ">= 1.39.0"
+		"MediaWiki": ">= 1.43.0"
 	},
 	"AutoloadNamespaces": {
 		"MediaWiki\\Extension\\SectionAnchors\\": "src/"
