@@ -19,7 +19,7 @@
 
 namespace MediaWiki\Extension\SectionAnchors;
 
-use MediaWiki\Hook\BeforePageDisplayHook;
+use MediaWiki\Output\Hook\BeforePageDisplayHook;
 use MediaWiki\Output\OutputPage;
 use Skin;
 
