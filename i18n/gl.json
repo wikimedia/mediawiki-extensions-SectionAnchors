@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"Toliño"
+		]
+	},
+	"sectionanchors-desc": "Engade unha ligazón ás cabeceiras",
+	"sectionanchors-button-label": "Ligazón",
+	"sectionanchors-button-tooltip": "Navega ata esta cabeceira",
+	"sectionanchors-button-notification-text": "Copiouse a ligazón á cabeceira «$1» no portapapeis"
+}
