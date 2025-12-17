@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"GuoPC"
+		]
+	},
+	"sectionanchors-desc": "添加指向标题的链接",
+	"sectionanchors-button-label": "链接",
+	"sectionanchors-button-tooltip": "导航到此标题",
+	"sectionanchors-button-notification-text": "指向标题“$1”的链接已复制到剪贴板"
+}
