@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"Tensama0415"
+		]
+	},
+	"sectionanchors-desc": "문단 제목에 링크를 추가합니다",
+	"sectionanchors-button-label": "링크",
+	"sectionanchors-button-tooltip": "이 문단 제목으로 이동",
+	"sectionanchors-button-notification-text": "문단 제목 \"$1\"(으)로의 링크가 클립보드로 복사됨"
+}
