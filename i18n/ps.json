@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"شاه زمان پټان"
+		]
+	},
+	"sectionanchors-desc": "سرليکونو ته تړونی ورگډوي",
+	"sectionanchors-button-label": "تړونی",
+	"sectionanchors-button-tooltip": "دې سرليک ته گرځښت کوي",
+	"sectionanchors-button-notification-text": "د \"$1\" سرليک ته تړونی، ټينگدړې ته ولمېسل شو"
+}

@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"Wizzard"
+		]
+	},
+	"sectionanchors-desc": "Pridáva k nadpisom odkaz",
+	"sectionanchors-button-label": "Odkaz",
+	"sectionanchors-button-tooltip": "Prejde na tento nadpis",
+	"sectionanchors-button-notification-text": "Odkaz na nadpis „$1“ bol skopírovaný do schránky"
+}
