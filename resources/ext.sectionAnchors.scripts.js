@@ -5,11 +5,13 @@ function createSectionAnchorButton( heading ) {
 	const modules = [ 'oojs-ui-widgets', 'oojs-ui.styles.icons-editing-core' ];
 	mw.loader.using( modules ).done( () => {
 		const $heading = $( heading ),
-			// h1, h2, h3, h4, h5, h6
-			$headingContainer = $heading.parent(),
-			$headingAnchor = $heading.prev( 'span[id]' ),
-			// If a heading contains special chars an additional span is added
+			isLegacyHeading = heading.classList.contains( 'mw-headline' ),
+			// Legacy markup: the surrounding h1 ... h6; current markup: the h1 ... h6 itself
+			$headingContainer = isLegacyHeading ? $heading.parent() : $heading,
+			// If a heading contains special chars an additional span is added (legacy markup only)
+			$headingAnchor = isLegacyHeading ? $heading.prev( 'span[id]' ) : $(),
 			headingAnchorId = $headingAnchor.attr( 'id' ) || $heading.attr( 'id' ),
+			headingText = $heading.text(),
 			sectionLinkIconWidget = new OO.ui.IconWidget( {
 				label: mw.message( 'sectionanchors-button-tooltip' ).text(),
 				icon: 'link',
@@ -21,7 +23,7 @@ function createSectionAnchorButton( heading ) {
 		$headingContainer.prepend( $sectionLink );
 		$sectionLink.data( {
 			headingAnchorId: headingAnchorId,
-			headingText: $heading.text()
+			headingText: headingText
 		} );
 
 		$sectionLink.on(
@@ -95,7 +97,11 @@ function createStyles() {
 	$( '<style>' ).text( styles ).appendTo( 'head' );
 }
 
-$( document ).on( 'mouseover', '.mw-headline', function () {
+const headingSelector = [ '.mw-headline' ].concat(
+	[ 1, 2, 3, 4, 5, 6 ].map( ( level ) => '.mw-heading > h' + level )
+).join( ', ' );
+
+$( document ).on( 'mouseover', headingSelector, function () {
 	if ( !this.$sectionAnchorButton ) {
 		const me = this;
 		createSectionAnchorButton( this ).done( () => {
@@ -116,7 +122,7 @@ $( document ).on( 'mouseout', '.sectionanchors-button', function () {
 	$( this ).hide();
 } );
 
-$( document ).on( 'mouseout', '.mw-headline', function () {
+$( document ).on( 'mouseout', headingSelector, function () {
 	const me = this;
 	setTimeout( () => {
 		if ( me.$sectionAnchorButton && !me.$sectionAnchorButton.data( 'isMouseOver' ) ) {
