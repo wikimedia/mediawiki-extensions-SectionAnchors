@@ -4,7 +4,7 @@ namespace MediaWiki\Extension\SectionAnchors\Tests;
 
 use MediaWiki\Extension\SectionAnchors\Hooks;
 use MediaWiki\Output\OutputPage;
-use Skin;
+use MediaWiki\Skin\Skin;
 
 /**
  * @coversDefaultClass \MediaWiki\Extension\SectionAnchors\Hooks
